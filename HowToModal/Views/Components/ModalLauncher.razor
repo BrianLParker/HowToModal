@@ -1,7 +1,7 @@
 ﻿@if (ModalService.IsOpen)
 {
-    <div class="modal-outer" @onclick="@ModalService.CloseModal">
-        <div class="modal-inner" @onclick:stopPropagation="true" >
+    <div class="modal-outer" @onclick="OnBackgroundClicked">
+        <div class="modal-inner" @onclick:stopPropagation="true">
             @ModalService.ModalFragment
         </div>
     </div>
@@ -9,3 +9,9 @@
 <div class="@(ModalService.IsOpen ? "modal-child-content" :"")">
     @ChildContent
 </div>
+<style>
+    :root {
+        --backgroundColour: @ModalService.BackgroundColour;
+        --backgroundBlur: @($"{ModalService.BlurPixels}px");
+    }
+</style>

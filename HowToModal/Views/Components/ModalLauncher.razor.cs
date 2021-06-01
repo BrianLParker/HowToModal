@@ -11,6 +11,14 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
+        void OnBackgroundClicked()
+        {
+            if(ModalService.AllowBackgroundClick)
+            {
+                ModalService.CloseModal();
+            }
+        }
+
         protected override void OnInitialized()
         {
             ModalService.IsOpenChanged += (changed) => StateHasChanged();

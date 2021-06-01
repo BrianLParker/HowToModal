@@ -17,12 +17,19 @@ namespace HowToModal.Services
 
         public RenderFragment ModalFragment { get; private set; }
 
+        public string BackgroundColour { get; set; }
+        public int BlurPixels { get; set; }
+        public bool AllowBackgroundClick { get; set; }
+
         public event Action<bool> IsOpenChanged;
 
-        public void OpenModal(RenderFragment modalFragment)
+        public void OpenModal(RenderFragment modalFragment, string background, int blurPixels, bool allowBackgroundClick)
         {
-            IsOpen = true;
             ModalFragment = modalFragment;
+            BackgroundColour = background;
+            BlurPixels = blurPixels;
+            AllowBackgroundClick = allowBackgroundClick;
+            IsOpen = true;
             IsOpenChanged?.Invoke(IsOpen);
         }
 

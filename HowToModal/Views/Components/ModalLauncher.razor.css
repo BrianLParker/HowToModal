@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #00000077;
+    background-color: var(--backgroundColour);
 }
 
 .modal-inner {
@@ -39,23 +39,23 @@
 
 @-webkit-keyframes blur {
     to {
-        -webkit-filter: blur(5px);
-        filter: blur(5px);
+        -webkit-filter: blur(var(--backgroundBlur));
+        filter: blur(var(--backgroundBlur));
     }
 }
 
 @-moz-keyframes blur {
     to {
-        -moz-filter: blur(5px);
-        filter: blur(5px);
+        -moz-filter: blur(var(--backgroundBlur));
+        filter: blur(var(--backgroundBlur));
     }
 }
 
 @keyframes blur {
     to {
-        -webkit-filter: blur(5px);
-        -moz-filter: blur(5px);
-        filter: blur(5px);
+        -webkit-filter: blur(var(--backgroundBlur));
+        -moz-filter: blur(var(--backgroundBlur));
+        filter: blur(var(--backgroundBlur));
     }
 }
 

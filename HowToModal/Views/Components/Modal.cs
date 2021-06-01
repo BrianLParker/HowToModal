@@ -11,7 +11,16 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
-        public void ShowModal() => ModalService.OpenModal(ChildContent);
+        [Parameter]
+        public string Background { get; set; } = "#00000077";
+
+        [Parameter]
+        public int BlurPixels { get; set; } = 5;
+
+        [Parameter]
+        public bool AllowBackgroundClick { get; set; } = true;
+
+        public void ShowModal() => ModalService.OpenModal(ChildContent, Background, BlurPixels, AllowBackgroundClick);
 
         public void CloseModal() => ModalService.CloseModal();
 
