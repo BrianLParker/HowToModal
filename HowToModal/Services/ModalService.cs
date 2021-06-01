@@ -10,12 +10,12 @@ namespace HowToModal.Services
         public ModalService(NavigationManager navigationManager)
         {
             this.navigationManager = navigationManager;
-            this.navigationManager.LocationChanged += (sender,args) => CloseModal();
+            this.navigationManager.LocationChanged += (sender, args) => CloseModal();
         }
 
         public bool IsOpen { get; private set; }
+
         public RenderFragment ModalFragment { get; private set; }
-        public string ModalColour { get; private set; }
 
         public event Action<bool> IsOpenChanged;
 
@@ -35,7 +35,5 @@ namespace HowToModal.Services
                 IsOpenChanged?.Invoke(IsOpen);
             }
         }
-
-        public void Refresh() => IsOpenChanged?.Invoke(IsOpen);
     }
 }

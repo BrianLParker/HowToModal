@@ -13,10 +13,8 @@ namespace HowToModal.Views.Components
 
         protected override void OnInitialized()
         {
-            ModalService.IsOpenChanged += ModalService_IsOpenChanged;
+            ModalService.IsOpenChanged += (changed) => StateHasChanged();
             base.OnInitialized();
         }
-
-        private void ModalService_IsOpenChanged(bool obj) => StateHasChanged();
     }
 }

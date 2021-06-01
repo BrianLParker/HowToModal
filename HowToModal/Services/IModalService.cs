@@ -7,10 +7,8 @@ namespace HowToModal.Services
     {
         bool IsOpen { get; }
         RenderFragment ModalFragment { get; }
-        string ModalColour { get; }
         event Action<bool> IsOpenChanged;
         void OpenModal(RenderFragment modalFragment);
         void CloseModal();
-        void Refresh();
     }
 }
