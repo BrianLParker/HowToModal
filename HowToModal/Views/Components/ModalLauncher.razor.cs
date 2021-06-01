@@ -11,6 +11,9 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
+
+        string ChildContentCss => ModalService.IsOpen ? "modal-child-content" : "";
+
         void OnBackgroundClicked()
         {
             if(ModalService.AllowBackgroundClick)
@@ -24,5 +27,7 @@ namespace HowToModal.Views.Components
             ModalService.IsOpenChanged += (changed) => StateHasChanged();
             base.OnInitialized();
         }
+
+
     }
 }
