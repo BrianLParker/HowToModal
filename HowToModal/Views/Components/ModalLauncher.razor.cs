@@ -11,7 +11,7 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
-        override protected void OnInitialized()
+        protected override void OnInitialized()
         {
             ModalService.IsOpenChanged += ModalService_IsOpenChanged;
             base.OnInitialized();

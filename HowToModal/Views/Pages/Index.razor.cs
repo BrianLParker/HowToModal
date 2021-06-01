@@ -5,7 +5,7 @@ namespace HowToModal.Views.Pages
 {
     public partial class Index : ComponentBase
     {
-        Modal modal1;
-        Modal modal2;
+        private Modal modal1;
+        private Modal modal2;
     }
 }

@@ -6,7 +6,7 @@ namespace HowToModal.Views.Components
     public class Modal : ComponentBase
     {
         [Inject]
-        IModalService ModalService { get; set; }
+        private IModalService ModalService { get; set; }
 
         [Parameter]
         public RenderFragment ChildContent { get; set; }
