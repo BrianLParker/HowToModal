@@ -1,3 +1,8 @@
+// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
 using HowToModal.Services;
 using Microsoft.AspNetCore.Components;
 
@@ -11,23 +16,17 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
+        private string ChildContentCss => ModalService.IsOpen ? "modal-child-content" : "";
 
-        string ChildContentCss => ModalService.IsOpen ? "modal-child-content" : "";
-
-        void OnBackgroundClicked()
+        private void OnBackgroundClicked()
         {
-            if(ModalService.AllowBackgroundClick)
+            if (ModalService.AllowBackgroundClick)
             {
                 ModalService.CloseModal();
             }
         }
 
         protected override void OnInitialized()
-        {
-            ModalService.IsOpenChanged += (changed) => StateHasChanged();
-            base.OnInitialized();
-        }
-
-
+            => ModalService.IsOpenChanged += (changed) => StateHasChanged();
     }
 }

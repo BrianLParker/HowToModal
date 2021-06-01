@@ -1,3 +1,8 @@
+// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
 using System.Collections.Generic;
 using HowToModal.Services;
 using Microsoft.AspNetCore.Components;

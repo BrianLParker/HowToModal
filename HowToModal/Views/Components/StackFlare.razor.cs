@@ -1,6 +1,7 @@
-// ===================================
+// -------------------------------------------
 // Copyright (c) 2021, Brian Parker
-// ===================================
+// Free to use just pay your knowledge forward
+// -------------------------------------------
 
 namespace HowToModal.Views.Components
 {

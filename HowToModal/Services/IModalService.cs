@@ -1,4 +1,9 @@
-﻿using System;
+﻿// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
+using System;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Services

@@ -1,4 +1,9 @@
-﻿using HowToModal.Services;
+﻿// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
+using HowToModal.Services;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Views.Components

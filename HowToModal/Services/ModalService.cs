@@ -1,4 +1,9 @@
-﻿using System;
+﻿// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
+using System;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Services
@@ -14,21 +19,24 @@ namespace HowToModal.Services
         }
 
         public bool IsOpen { get; private set; }
-
         public RenderFragment ModalFragment { get; private set; }
-
+        public bool AllowBackgroundClick { get; set; }
         public string BackgroundColour { get; set; }
         public int BlurPixels { get; set; }
-        public bool AllowBackgroundClick { get; set; }
 
         public event Action<bool> IsOpenChanged;
 
-        public void OpenModal(RenderFragment modalFragment, string background, int blurPixels, bool allowBackgroundClick)
+        public void OpenModal(
+            RenderFragment modalFragment,
+            string background,
+            int blurPixels,
+            bool allowBackgroundClick)
         {
             ModalFragment = modalFragment;
             BackgroundColour = background;
             BlurPixels = blurPixels;
             AllowBackgroundClick = allowBackgroundClick;
+
             IsOpen = true;
             IsOpenChanged?.Invoke(IsOpen);
         }

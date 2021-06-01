@@ -1,3 +1,8 @@
+// -------------------------------------------
+// Copyright (c) 2021, Brian Parker
+// Free to use just pay your knowledge forward
+// -------------------------------------------
+
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
