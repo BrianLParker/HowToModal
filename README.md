@@ -10,7 +10,7 @@ They are a fundamentally just html and css. There is no need to call JavaScript 
 Essentially they are just a div that covers your existing page and shows content in the centre (usually).
 In this project I capture the render fragment for the modal and via service send it to the layout for display to achieve the html hierarchy I need to blur the background.
 
-In html the blur filter effects all elements within the element its applied to. This is why it is necessary to push the render fragment to layout. 
+In html the blur filter effect is applied to an element and blurs all of its contents. This is why it is necessary to push the render fragment to layout, to get it outside the blur. 
 
 Even thought I'm using this technique you can still interact with the modal contents as you would any other component on the page it came from no special handling.
 
