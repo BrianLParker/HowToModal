@@ -1,7 +1,7 @@
 ﻿@if (ModalService.IsOpen)
 {
-    <div class="modal-outer">
-        <div class="modal-inner">
+    <div class="modal-outer" @onclick="@ModalService.CloseModal">
+        <div class="modal-inner" @onclick:stopPropagation="true" >
             @ModalService.ModalFragment
         </div>
     </div>
