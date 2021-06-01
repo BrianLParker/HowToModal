@@ -1,0 +1,39 @@
+﻿@page "/"
+
+<h1>How to Modal</h1>
+
+I would like to share with the community how to modal without javascript.
+<hr />
+
+<button @onclick="()=>modal1.ShowModal()" class="btn btn-primary">Show Modal 1</button>
+
+<button @onclick="()=>modal2.ShowModal()" class="btn btn-primary">Show Modal 2</button>
+
+<hr />
+
+<StackFlare />
+<br />
+<em>Enjoy!</em>
+<Modal @ref="@modal1">
+    <MyModalContent />
+</Modal>
+
+
+<Modal @ref="@modal2">
+    <div class="modal-content shadow-lg">
+        <div class="modal-header">
+            <h5 class="modal-title">Weather Forecast</h5>
+            <ModalCloseButton type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </ModalCloseButton>
+        </div>
+        <div class="modal-body">
+            <FetchData />
+        </div>
+        <div class="modal-footer">
+            <ModalCloseButton type="button" class="btn btn-secondary" aria-label="Close">Close</ModalCloseButton>
+        </div>
+    </div>
+</Modal>
+
+

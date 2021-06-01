@@ -1,0 +1,11 @@
+﻿@if (ModalService.IsOpen)
+{
+    <div class="modal-outer">
+        <div class="modal-inner">
+            @ModalService.ModalFragment
+        </div>
+    </div>
+}
+<div class="@(ModalService.IsOpen ? "modal-child-content" :"")">
+    @ChildContent
+</div>
