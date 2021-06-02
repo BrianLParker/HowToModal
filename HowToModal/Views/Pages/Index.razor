@@ -6,8 +6,8 @@ I would like to share with the community how to modal without javascript.
 <hr />
 
 <button @onclick="()=>modal1.ShowModal()" class="btn btn-primary">Show Modal 1</button>
-
 <button @onclick="()=>modal2.ShowModal()" class="btn btn-primary">Show Modal 2</button>
+<button @onclick="()=>modal3.ShowModal()" class="btn btn-primary">Show Modal 3</button>
 
 <hr />
 
@@ -35,4 +35,8 @@ I would like to share with the community how to modal without javascript.
             <ModalCloseButton type="button" class="btn btn-secondary" aria-label="Close">Close</ModalCloseButton>
         </div>
     </div>
+</Modal>
+
+<Modal @ref="@modal3" Background="#0000ff77" BlurPixels="3">
+    <BounceDemo BoxColor="#00ff00" BallColor="#ff00ff" />
 </Modal>

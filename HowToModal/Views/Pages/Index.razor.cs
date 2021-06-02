@@ -12,5 +12,6 @@ namespace HowToModal.Views.Pages
     {
         private Modal modal1;
         private Modal modal2;
+        private Modal modal3;
     }
 }
