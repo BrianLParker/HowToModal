@@ -3,31 +3,27 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-using HowToModal.Services;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Views.Components
 {
-    public class Modal : ComponentBase
+    public class Modal : ModalBase
     {
-        [Inject]
-        private IModalService ModalService { get; set; }
-
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
+        public override void ShowModal() => ModalService.OpenModal(ChildContent, Background, BlurPixels, AllowBackgroundClick);
+    }
+
+    public class TemplateModal<TContent> : ModalBase
+    {
         [Parameter]
-        public string Background { get; set; } = "#00000077";
+        public RenderFragment<TContent> ChildContent { get; set; }
 
-        [Parameter]
-        public int BlurPixels { get; set; } = 5;
+        public TContent Value { get; set; }
 
-        [Parameter]
-        public bool AllowBackgroundClick { get; set; } = true;
+        public override void ShowModal() => ModalService.OpenModal(ChildContent(Value), Background, BlurPixels, AllowBackgroundClick);
 
-        public void ShowModal() => ModalService.OpenModal(ChildContent, Background, BlurPixels, AllowBackgroundClick);
-
-        public void CloseModal() => ModalService.CloseModal();
-
+        public void ShowModal(TContent content) => ModalService.OpenModal(ChildContent(content), Background, BlurPixels, AllowBackgroundClick);
     }
 }
