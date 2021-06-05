@@ -14,16 +14,4 @@ namespace HowToModal.Views.Components
 
         public override void ShowModal() => ModalService.OpenModal(ChildContent, Background, BlurPixels, AllowBackgroundClick);
     }
-
-    public class TemplateModal<TContent> : ModalBase
-    {
-        [Parameter]
-        public RenderFragment<TContent> ChildContent { get; set; }
-
-        public TContent Value { get; set; }
-
-        public override void ShowModal() => ModalService.OpenModal(ChildContent(Value), Background, BlurPixels, AllowBackgroundClick);
-
-        public void ShowModal(TContent content) => ModalService.OpenModal(ChildContent(content), Background, BlurPixels, AllowBackgroundClick);
-    }
 }
