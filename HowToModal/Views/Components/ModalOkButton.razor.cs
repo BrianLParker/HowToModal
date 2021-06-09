@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Views.Components
 {
-    public partial class ModalCloseButton : ComponentBase
+    public partial class ModalOkButton : ComponentBase
     {
         [Inject]
         private IModalService ModalService { get; set; }
@@ -20,6 +20,6 @@ namespace HowToModal.Views.Components
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object> ButtonAttributes { get; set; }
 
-        private void CloseDialog() => ModalService.CloseModal(modalCloseState: Models.ModalCloseState.Close);
+        private void CloseDialog() => ModalService.CloseModal(modalCloseState: Models.ModalCloseState.Ok);
     }
 }

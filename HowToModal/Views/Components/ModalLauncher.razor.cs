@@ -22,7 +22,7 @@ namespace HowToModal.Views.Components
         {
             if (ModalService.AllowBackgroundClick)
             {
-                ModalService.CloseModal();
+                ModalService.CloseModal(modalCloseState: Models.ModalCloseState.Cancel);
             }
         }
 

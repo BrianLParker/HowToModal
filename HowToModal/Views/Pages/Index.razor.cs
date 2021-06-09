@@ -3,6 +3,8 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
+using System;
+using HowToModal.Models;
 using HowToModal.Views.Components;
 using Microsoft.AspNetCore.Components;
 
@@ -13,5 +15,18 @@ namespace HowToModal.Views.Pages
         private Modal modal1;
         private Modal modal2;
         private Modal modal3;
+        private TemplateModal<SomeDataModel> modal4;
+
+        private SomeDataModel someData = new SomeDataModel { Name = "Brian" };
+
+        void Modal1Closed(ModalCloseState modalCloseState)
+        {
+            Console.WriteLine($"ModalCloseState : {modalCloseState}");
+        }
+
+        void Modal4Closed(ModalResult<SomeDataModel> modalResult)
+        {
+            Console.WriteLine($"ModalCloseState : {modalResult.CloseState} Value: {modalResult.Value.Name}");
+        }
     }
 }

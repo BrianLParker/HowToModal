@@ -8,6 +8,7 @@ I would like to share with the community how to modal without javascript.
 <button @onclick="()=>modal1.ShowModal()" class="btn btn-primary">Show Modal 1</button>
 <button @onclick="()=>modal2.ShowModal()" class="btn btn-primary">Show Modal 2</button>
 <button @onclick="()=>modal3.ShowModal()" class="btn btn-primary">Show Modal 3</button>
+<button @onclick="()=>modal4.ShowModal()" class="btn btn-primary">Show Modal 4</button>
 
 <hr />
 
@@ -16,7 +17,7 @@ I would like to share with the community how to modal without javascript.
 <em>Enjoy!</em>
 
 
-<Modal @ref="@modal1">
+<Modal @ref="@modal1" OnClose="Modal1Closed">
     <MyModalContent />
 </Modal>
 
@@ -41,3 +42,9 @@ I would like to share with the community how to modal without javascript.
 <Modal @ref="@modal3" Background="#0000ff77" BlurPixels="3">
     <BounceDemo BoxColor="#00ff00" BallColor="#ff00ff" />
 </Modal>
+
+<TemplateModal @ref="@modal4" Value="someData" TContent="SomeDataModel" OnClose="Modal4Closed">
+    <input type="text" @bind="@context.Name" />
+    <ModalOkButton>Ok</ModalOkButton>
+    <ModalCloseButton>Close</ModalCloseButton>
+</TemplateModal>

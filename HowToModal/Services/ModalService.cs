@@ -4,6 +4,8 @@
 // -------------------------------------------
 
 using System;
+using HowToModal.Models;
+using HowToModal.Views.Components;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Services
@@ -11,11 +13,12 @@ namespace HowToModal.Services
     public class ModalService : IModalService
     {
         private readonly NavigationManager navigationManager;
+        private ModalBase modal;
 
         public ModalService(NavigationManager navigationManager)
         {
             this.navigationManager = navigationManager;
-            this.navigationManager.LocationChanged += (sender, args) => CloseModal();
+            this.navigationManager.LocationChanged += (sender, args) => CloseModal(ModalCloseState.Cancel);
         }
 
         public bool IsOpen { get; private set; }
@@ -27,26 +30,29 @@ namespace HowToModal.Services
         public event Action<bool> IsOpenChanged;
 
         public void OpenModal(
+            ModalBase modal,
             RenderFragment modalFragment,
             string background,
             int blurPixels,
             bool allowBackgroundClick)
         {
-            ModalFragment = modalFragment;
+            this.modal = modal;
+            ModalFragment =  modalFragment;
             BackgroundColour = background;
             BlurPixels = blurPixels;
             AllowBackgroundClick = allowBackgroundClick;
 
             IsOpen = true;
             IsOpenChanged?.Invoke(IsOpen);
-        }
+}
 
-        public void CloseModal()
+        public void CloseModal(ModalCloseState modalCloseState)
         {
             if (IsOpen)
             {
                 IsOpen = false;
                 ModalFragment = null;
+                modal.EmitClose(modalCloseState);
                 IsOpenChanged?.Invoke(IsOpen);
             }
         }

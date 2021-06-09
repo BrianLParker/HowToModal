@@ -4,6 +4,8 @@
 // -------------------------------------------
 
 using System;
+using HowToModal.Models;
+using HowToModal.Views.Components;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Services
@@ -17,7 +19,7 @@ namespace HowToModal.Services
         bool AllowBackgroundClick { get; set; }
 
         event Action<bool> IsOpenChanged;
-        void OpenModal(RenderFragment modalFragment, string background, int blurPixels, bool allowBackgroundClick);
-        void CloseModal();
+        void OpenModal(ModalBase modal, RenderFragment modalFragment, string background, int blurPixels, bool allowBackgroundClick);
+        void CloseModal(ModalCloseState modalCloseState);
     }
 }

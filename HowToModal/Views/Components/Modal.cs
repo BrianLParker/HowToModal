@@ -3,6 +3,7 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
+using HowToModal.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Views.Components
@@ -12,6 +13,12 @@ namespace HowToModal.Views.Components
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
-        public override void ShowModal() => ModalService.OpenModal(ChildContent, Background, BlurPixels, AllowBackgroundClick);
+        [Parameter]
+        public EventCallback<ModalCloseState> OnClose { get; set; }
+
+        internal override void EmitClose(ModalCloseState modalCloseState)
+            => OnClose.InvokeAsync(modalCloseState);
+        
+        public override void ShowModal() => ModalService.OpenModal(this, ChildContent, Background, BlurPixels, AllowBackgroundClick);
     }
 }

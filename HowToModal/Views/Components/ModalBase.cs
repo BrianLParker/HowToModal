@@ -3,6 +3,7 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
+using HowToModal.Models;
 using HowToModal.Services;
 using Microsoft.AspNetCore.Components;
 
@@ -22,9 +23,12 @@ namespace HowToModal.Views.Components
         [Parameter]
         public bool AllowBackgroundClick { get; set; } = true;
 
+        internal abstract void EmitClose(ModalCloseState modalCloseState);
+          
+
         public abstract void ShowModal();
 
-        public void CloseModal() => ModalService.CloseModal();
+        public void CloseModal(ModalCloseState modalCloseState) => ModalService.CloseModal(modalCloseState);
 
     }
 }
