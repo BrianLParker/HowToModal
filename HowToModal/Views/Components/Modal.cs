@@ -16,9 +16,9 @@ namespace HowToModal.Views.Components
         [Parameter]
         public EventCallback<ModalCloseState> OnClose { get; set; }
 
-        internal override void EmitClose(ModalCloseState modalCloseState)
+        override internal void EmitClose(ModalCloseState modalCloseState)
             => OnClose.InvokeAsync(modalCloseState);
-        
+
         public override void ShowModal() => ModalService.OpenModal(this, ChildContent, Background, BlurPixels, AllowBackgroundClick);
     }
 }

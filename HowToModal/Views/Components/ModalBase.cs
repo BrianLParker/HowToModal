@@ -24,7 +24,7 @@ namespace HowToModal.Views.Components
         public bool AllowBackgroundClick { get; set; } = true;
 
         internal abstract void EmitClose(ModalCloseState modalCloseState);
-          
+
 
         public abstract void ShowModal();
 

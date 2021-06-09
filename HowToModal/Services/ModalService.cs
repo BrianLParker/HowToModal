@@ -37,14 +37,14 @@ namespace HowToModal.Services
             bool allowBackgroundClick)
         {
             this.modal = modal;
-            ModalFragment =  modalFragment;
+            ModalFragment = modalFragment;
             BackgroundColour = background;
             BlurPixels = blurPixels;
             AllowBackgroundClick = allowBackgroundClick;
 
             IsOpen = true;
             IsOpenChanged?.Invoke(IsOpen);
-}
+        }
 
         public void CloseModal(ModalCloseState modalCloseState)
         {
@@ -52,7 +52,7 @@ namespace HowToModal.Services
             {
                 IsOpen = false;
                 ModalFragment = null;
-                modal.EmitClose(modalCloseState);
+                this.modal.EmitClose(modalCloseState);
                 IsOpenChanged?.Invoke(IsOpen);
             }
         }

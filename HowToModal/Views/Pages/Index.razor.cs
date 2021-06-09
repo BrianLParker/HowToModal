@@ -20,14 +20,8 @@ namespace HowToModal.Views.Pages
         private SomeDataModel someData = new SomeDataModel { Name = "Brian" };
         private SomeDataModel someData2 = new SomeDataModel { Name = "Brian Parker" };
 
-        void Modal1Closed(ModalCloseState modalCloseState)
-        {
-            Console.WriteLine($"ModalCloseState : {modalCloseState}");
-        }
+        private void Modal1Closed(ModalCloseState modalCloseState) => Console.WriteLine($"ModalCloseState : {modalCloseState}");
 
-        void Modal4Closed(ModalResult<SomeDataModel> modalResult)
-        {
-            Console.WriteLine($"ModalCloseState : {modalResult.CloseState} Value: {modalResult.Value.Name}");
-        }
+        private void Modal4Closed(ModalResult<SomeDataModel> modalResult) => Console.WriteLine($"ModalCloseState : {modalResult.CloseState} Value: {modalResult.Value.Name}");
     }
 }
