@@ -18,6 +18,7 @@ namespace HowToModal.Views.Pages
         private TemplateModal<SomeDataModel> modal4;
 
         private SomeDataModel someData = new SomeDataModel { Name = "Brian" };
+        private SomeDataModel someData2 = new SomeDataModel { Name = "Brian Parker" };
 
         void Modal1Closed(ModalCloseState modalCloseState)
         {
