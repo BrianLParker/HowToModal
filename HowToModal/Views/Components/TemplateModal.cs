@@ -26,7 +26,8 @@ namespace HowToModal.Views.Components
         }
         public void ShowModal(TContent value)
         {
-            ModalService.OpenModal((ModalBase)this, ChildContent(value), Background, BlurPixels, AllowBackgroundClick);
+            this.Value = value;
+            ModalService.OpenModal(this, ChildContent(value), Background, BlurPixels, AllowBackgroundClick);
         }
 
         internal override void EmitClose(ModalCloseState modalCloseState)
