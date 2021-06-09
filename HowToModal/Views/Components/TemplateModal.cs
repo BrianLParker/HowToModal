@@ -13,8 +13,7 @@ namespace HowToModal.Views.Components
     {
         [Parameter]
         public RenderFragment<TContent> ChildContent { get; set; }
-
-        [Parameter]
+      
         public TContent Value { get; set; }
 
         [Parameter]
