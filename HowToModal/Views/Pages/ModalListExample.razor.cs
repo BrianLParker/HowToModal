@@ -18,7 +18,7 @@ namespace HowToModal.Views.Pages
         private SomeDataModel currentModel;
         private IEnumerable<SomeDataModel> someData;
 
-        protected override void OnInitialized() 
+        protected override void OnInitialized()
         {
             someData = Enumerable.Range(1, 20).Select(i => new SomeDataModel
             {
@@ -36,15 +36,14 @@ namespace HowToModal.Views.Pages
             modal.ShowModal(temp);
         }
 
-
         private void ModalClosed(ModalResult<SomeDataModel> modalResult)
         {
-            if(modalResult.CloseState == ModalCloseState.Ok)
+            if (modalResult.CloseState == ModalCloseState.Ok)
             {
                 CopyModel(modalResult.Value, currentModel);
                 StateHasChanged();
             }
-            
+
         }
 
         private void CopyModel(SomeDataModel source, SomeDataModel dest)
