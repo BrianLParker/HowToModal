@@ -31,9 +31,6 @@
     -ms-animation: blur 0.5s linear forwards;
     -o-animation: blur 0.5s linear forwards;
     animation: blur 0.5s linear forwards;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
 }
 
 

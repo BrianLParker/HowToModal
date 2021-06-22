@@ -1,4 +1,4 @@
-﻿<div style="width:600px;height:600px;">
+﻿<div class="fadeIn" style="width:600px;height:600px;">
     <div class="h-100 d-flex flex-column">
         <div class="flex-fill d-flex flex-column">
             <div class="scene-body">
@@ -22,7 +22,7 @@
             <div class="d-flex flex-row p-3 bg-dark text-white-50">
                 <input class="form-control col-2 mr-3" type="color" id="favcolor" name="favcolor" @bind-value="@ballColor" @bind-value:event="oninput" />
                 <input class="form-control col-2" type="color" id="favcolor" name="favcolor" @bind-value="@boxColor" @bind-value:event="oninput" />
-                <div class="m-2 col-8"><small>Based on work shared by <strong>Amit Sheen</strong>. No java or graphics used. Just html and blazor.</small></div>
+                <div class="m-2 col-8"><small>Based on work shared by <strong>Amit Sheen</strong>.<br/>No java or graphics used. Just html and blazor.</small></div>
             </div>
             <div class="bg-dark p-3 mb-2">
                 <input type="range" class="form-control-range" id="formControlRange" @bind-value="@Angle" min="0" max="359" @bind-value:event="oninput" />

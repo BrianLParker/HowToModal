@@ -1,0 +1,18 @@
+﻿@page "/modals"
+<h3>Edit Modal Example</h3>
+<ul class="list-group">
+    @foreach (var someModel in someData)
+    {
+        <li @key=someModel.Id class="d-flex flex-row list-group-item">
+            <div class="col-2">  @someModel.Name</div>
+            <button @onclick="()=>OpenModal(someModel)" class="btn btn-primary btn-sm">edit</button>
+        </li>
+    }
+</ul>
+
+<TemplateModal @ref="@modal" TContent="SomeDataModel" OnClose="ModalClosed" Background="#0000ff77" BlurPixels="3">
+    <SomeModelEditForm SomeData="@context" />
+</TemplateModal>
+
+
+
