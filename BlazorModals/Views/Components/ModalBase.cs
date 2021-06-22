@@ -3,8 +3,8 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-using BlazorModals.Services;
 using BlazorModals.Models;
+using BlazorModals.Services;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorModals.Views.Components

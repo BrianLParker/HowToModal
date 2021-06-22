@@ -1,12 +1,27 @@
 ﻿<div class="modal-content shadow-lg fadeIn">
     <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title text-primary">Welcome to Blazor Modals</h5>
         <ModalCloseButton type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </ModalCloseButton>
     </div>
     <div class="modal-body">
-        <p>This modal will close by clicking close, clicking outside the panel or by navigation.</p>
+        <div class="d-flex flex-column align-items-start">
+            <div class="mb-2">
+                <strong>Good looking modals with a blurred background using the colour of your choice.</strong>
+            </div>
+            <div>Features</div>
+            <ul class="d-flex flex-column align-items-start">
+                <li>Custom Content</li>
+                <li>Templated Content</li>
+                <li>OnClose event</li>
+                <li>Blur amount</li>
+                <li>Background colour</li>
+                <li>Ability to disable background click to close</li>
+                <li>Handles navigation events to close the modal</li>
+            </ul>
+            <em>This modal will close by clicking close, clicking outside the panel or by navigation.</em>
+        </div>
     </div>
     <div class="modal-footer">
         <ModalCloseButton type="button" class="btn btn-secondary" aria-label="Close">Close</ModalCloseButton>

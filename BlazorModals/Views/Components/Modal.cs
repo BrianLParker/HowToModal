@@ -4,7 +4,6 @@
 // -------------------------------------------
 
 using BlazorModals.Models;
-using BlazorModals.Views.Components;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorModals.Views.Components

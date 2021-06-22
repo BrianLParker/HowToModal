@@ -8,8 +8,6 @@ I would like to share with the community how to modal without javascript.
 <button @onclick="()=>modal1.ShowModal()" class="btn btn-primary">Modal 1</button>
 <button @onclick="()=>modal2.ShowModal()" class="btn btn-primary">Modal 2</button>
 <button @onclick="()=>modal3.ShowModal()" class="btn btn-primary">Modal 3</button>
-<button @onclick="()=>modal4.ShowModal(someData1)" class="btn btn-primary">Modal 4</button>
-<button @onclick="()=>modal4.ShowModal(someData2)" class="btn btn-primary">Modal 4 (Different data)</button>
 
 <hr />
 
@@ -18,11 +16,11 @@ I would like to share with the community how to modal without javascript.
 <em>Enjoy!</em>
 
 
-<Modal @ref="@modal1" OnClose="Modal1Closed">
+<Modal @ref="@modal1" OnClose="Modal1Closed" Background="#0088ff77" BlurPixels="3" >
     <MyModalContent />
 </Modal>
 
-<Modal @ref="@modal2" Background="#0088ff77" BlurPixels="15" AllowBackgroundClick="false">
+<Modal @ref="@modal2" AllowBackgroundClick="false">
     <div class="modal-content shadow-lg fadeIn">
         <div class="modal-header">
             <h5 class="modal-title">Weather Forecast</h5>
@@ -44,20 +42,3 @@ I would like to share with the community how to modal without javascript.
     <BounceDemo BoxColor="#00ff00" BallColor="#ff00ff" />
 </Modal>
 
-<TemplateModal @ref="@modal4" TContent="SomeDataModel" OnClose="Modal4Closed" Background="#ffa50077" BlurPixels="3">
-    <div class="modal-content shadow-lg fadeIn">
-        <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <ModalCloseButton type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </ModalCloseButton>
-        </div>
-        <div class="modal-body">
-            <input type="text" @bind="@context.Name" />
-        </div>
-        <div class="modal-footer">
-            <ModalCloseButton type="button" class="btn btn-secondary" aria-label="Close">Close</ModalCloseButton>
-            <ModalOkButton type="button" class="btn btn-primary" aria-label="Save Changes">Save Changes</ModalOkButton>
-        </div>
-    </div>
-</TemplateModal>
