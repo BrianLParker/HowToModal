@@ -1,5 +1,6 @@
 
 
+
 # How To Modal
 
 
@@ -16,6 +17,9 @@ In html the blur filter effect is applied to an element and blurs all of its con
 Even though I'm using this technique you can still interact with the modal contents as you would any other component on the page it came from no special handling.
 
 I takes a little work to set it up, in the end you will have a reusable modal component that not only looks good but is easy to use.
+
+**Package install**
+`Install-Package BlazorModals -Version 1.0.0`
 
 **Provide the service for injection:**
 ```
