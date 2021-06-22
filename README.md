@@ -21,6 +21,13 @@ I takes a little work to set it up, in the end you will have a reusable modal co
 ```
 builder.Services.AddScoped<IModalService, ModalService>();
 ```
+
+**_Imports.razor**
+```
+@using BlazorModals.Models
+@using BlazorModals.Views.Components
+```
+
 **Wrap your layout with the Modal Launcher component**
 ```
 @inherits LayoutComponentBase
@@ -52,12 +59,17 @@ builder.Services.AddScoped<IModalService, ModalService>();
     {
         <li @key=someModel.Id class="d-flex flex-row list-group-item">
             <div class="col-2">  @someModel.Name</div>
-            <button @onclick="()=>OpenModal(someModel)" class="btn btn-primary btn-sm">edit</button>
+            <button @onclick="()=>OpenModal(someModel)" 
+                    class="btn btn-primary btn-sm">edit</button>
         </li>
     }
 </ul>
 
-<TemplateModal @ref="@modal" TContent="SomeDataModel" OnClose="ModalClosed" Background="#0000ff77" BlurPixels="3">
+<TemplateModal @ref="@modal" 
+               TContent="SomeDataModel" 
+               OnClose="ModalClosed" 
+               Background="#0000ff77" 
+               BlurPixels="3" >
     <SomeModelEditForm SomeData="@context" />
 </TemplateModal>
 
