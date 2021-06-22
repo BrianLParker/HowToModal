@@ -3,10 +3,10 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-using HowToModal.Services;
+using BlazorModals.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace HowToModal.Views.Components
+namespace BlazorModals.Views.Components
 {
     public partial class ModalLauncher : ComponentBase
     {

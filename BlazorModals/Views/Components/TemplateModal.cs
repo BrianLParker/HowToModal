@@ -3,10 +3,10 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-using HowToModal.Models;
+using BlazorModals.Models;
 using Microsoft.AspNetCore.Components;
 
-namespace HowToModal.Views.Components
+namespace BlazorModals.Views.Components
 {
     public class TemplateModal<TContent> : ModalBase
     {

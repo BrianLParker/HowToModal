@@ -4,11 +4,11 @@
 // -------------------------------------------
 
 using System;
-using HowToModal.Models;
-using HowToModal.Views.Components;
+using BlazorModals.Models;
+using BlazorModals.Views.Components;
 using Microsoft.AspNetCore.Components;
 
-namespace HowToModal.Services
+namespace BlazorModals.Services
 {
     public interface IModalService
     {

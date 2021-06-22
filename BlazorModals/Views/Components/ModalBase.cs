@@ -3,11 +3,11 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-using HowToModal.Models;
-using HowToModal.Services;
+using BlazorModals.Services;
+using BlazorModals.Models;
 using Microsoft.AspNetCore.Components;
 
-namespace HowToModal.Views.Components
+namespace BlazorModals.Views.Components
 {
     public abstract class ModalBase : ComponentBase
     {

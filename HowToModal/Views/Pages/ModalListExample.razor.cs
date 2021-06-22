@@ -6,8 +6,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BlazorModals.Models;
+using BlazorModals.Views.Components;
 using HowToModal.Models;
-using HowToModal.Views.Components;
 
 namespace HowToModal.Views.Pages
 {

@@ -4,8 +4,9 @@
 // -------------------------------------------
 
 using System;
+using BlazorModals.Models;
+using BlazorModals.Views.Components;
 using HowToModal.Models;
-using HowToModal.Views.Components;
 using Microsoft.AspNetCore.Components;
 
 namespace HowToModal.Views.Pages

@@ -3,7 +3,7 @@
 // Free to use just pay your knowledge forward
 // -------------------------------------------
 
-namespace HowToModal.Models
+namespace BlazorModals.Models
 {
     public class ModalResult<TContent>
     {
