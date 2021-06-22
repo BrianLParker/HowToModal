@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright ©, 2021 Brian Parker</Copyright>
+    <RepositoryUrl>https://github.com/BrianLParker/HowToModal</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/BrianLParker/HowToModal</PackageProjectUrl>
+    <Description>Blazor Modals without jsInterop.</Description>
+    <Authors>Brian Parker</Authors>
+    <Product>Blazor Modals</Product>
+    <PackageIcon>icon-64x64.png</PackageIcon>
+    <PackageIconUrl />
+    <Version>1.0.0.0</Version>
   </PropertyGroup>
 
   
@@ -11,6 +21,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\icon-64x64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

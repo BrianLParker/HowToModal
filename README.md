@@ -95,11 +95,11 @@ builder.Services.AddScoped<IModalService, ModalService>();
 
 **Modal Parameters**
 
-|Paramater  |Type  |Default  |  |
+| Paramater  | Type  | Default  |  |
 |--|--|--|--|
-|Background|string|#00000077| The colour of the background. For example "#000000ff77" for tanslucent blue|
-|BlurPixels |int|5|The quantity of blur pixels
-|AllowBackgroundClick|bool|true| When true clicking on the background closes the modal.
+| Background | string | #00000077 | The colour of the background. For example "#000000ff77" for tanslucent blue|
+| BlurPixels | int | 5 | The quantity of blur pixels
+| AllowBackgroundClick | bool | true | When true clicking on the background closes the modal.
 ```
 <Modal @ref="@modal" 
              Background="#0088ff77" 
