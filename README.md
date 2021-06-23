@@ -109,6 +109,18 @@ builder.Services.AddScoped<IModalService, ModalService>();
 }
 ```
 
+**The Buttons**
+```
+<ModalCloseButton>Close</ModalCloseButton>
+<ModalOkButton>Save changes</ModalOkButton>
+```
+
+They capture styling:
+```
+<ModalCloseButton type="button" class="btn btn-secondary" aria-label="Close">Close</ModalCloseButton>
+<ModalOkButton type="button" class="btn btn-primary">Save changes</ModalOkButton>
+```
+
 **Modal Parameters**
 
 | Paramater  | Type  | Default  |  |
