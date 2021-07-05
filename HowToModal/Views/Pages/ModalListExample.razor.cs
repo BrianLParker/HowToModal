@@ -18,29 +18,26 @@ namespace HowToModal.Views.Pages
         private SomeDataModel currentModel;
         private IEnumerable<SomeDataModel> someData;
 
-        protected override void OnInitialized()
+        protected override void OnInitialized() => this.someData = Enumerable.Range(1, 20).Select(i => new SomeDataModel
         {
-            someData = Enumerable.Range(1, 20).Select(i => new SomeDataModel
-            {
-                Id = i,
-                Name = $"Name {i}",
-                DateOfBirth = DateTimeOffset.Now - TimeSpan.FromDays(i * 25)
-            }).ToList();
-        }
+            Id = i,
+            Name = $"Name {i}",
+            DateOfBirth = DateTimeOffset.Now - TimeSpan.FromDays(i * 25)
+        }).ToList();
 
         private void OpenModal(SomeDataModel data)
         {
-            currentModel = data;
-            var temp = new SomeDataModel();
+            this.currentModel = data;
+            SomeDataModel temp = new SomeDataModel();
             CopyModel(data, temp);
-            modal.ShowModal(temp);
+            this.modal.ShowModal(temp);
         }
 
         private void ModalClosed(ModalResult<SomeDataModel> modalResult)
         {
             if (modalResult.CloseState == ModalCloseState.Ok)
             {
-                CopyModel(modalResult.Value, currentModel);
+                CopyModel(modalResult.Value, this.currentModel);
                 StateHasChanged();
             }
 
