@@ -19,7 +19,7 @@ Even though I'm using this technique you can still interact with the modal conte
 I takes a little work to set it up, in the end you will have a reusable modal component that not only looks good but is easy to use.
 
 **Package install**
-`Install-Package BlazorModals -Version 1.0.0`
+`Install-Package BlazorModals -Version 1.0.0.1`
 
 **Provide the service for injection:**
 ```

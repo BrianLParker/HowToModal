@@ -6,12 +6,12 @@
     <Copyright>Copyright ©, 2021 Brian Parker</Copyright>
     <RepositoryUrl>https://github.com/BrianLParker/HowToModal</RepositoryUrl>
     <PackageProjectUrl>https://github.com/BrianLParker/HowToModal</PackageProjectUrl>
-    <Description>Blazor Modals. Supports bootstrap.  Background blur. Background color, Templated content and OnClose event.</Description>
+    <Description>Blazor Modals. Supports bootstrap.  Background blur. Background color, Templated content and OnClose event, Optional background click to close, No JsInterop.</Description>
     <Authors>Brian Parker</Authors>
     <Product>Blazor Modals</Product>
     <PackageIcon>icon-64x64.png</PackageIcon>
     <PackageIconUrl />
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
   </PropertyGroup>
 
   

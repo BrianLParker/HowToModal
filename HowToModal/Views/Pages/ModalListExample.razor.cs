@@ -28,7 +28,7 @@ namespace HowToModal.Views.Pages
         private void OpenModal(SomeDataModel data)
         {
             this.currentModel = data;
-            SomeDataModel temp = new SomeDataModel();
+            SomeDataModel temp = new();
             CopyModel(data, temp);
             this.modal.ShowModal(temp);
         }
@@ -40,10 +40,9 @@ namespace HowToModal.Views.Pages
                 CopyModel(modalResult.Value, this.currentModel);
                 StateHasChanged();
             }
-
         }
 
-        private void CopyModel(SomeDataModel source, SomeDataModel dest)
+        private static void CopyModel(SomeDataModel source, SomeDataModel dest)
         {
             dest.Id = source.Id;
             dest.Name = source.Name;
